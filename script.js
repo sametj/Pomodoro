@@ -112,6 +112,7 @@
             }
         }, 1000);
         
+        //resetting pomodoro timer
         reset.addEventListener('click', function() {
                 timerStarted = false;
                 count = 0;
@@ -130,37 +131,17 @@
  
    
     //Setting Pomodoro Stages
-   function getPomodoroStage(count){
-    switch (count){
-        case 0:
+   function getPomodoroStage(focus){
+    switch (focus){
+        case 'Work Time!':
             return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
             timerStarted = true,startTimer(workTimer);
             
-        case 1: 
+        case 'Short Break!':
             return currentTask.innerHTML = 'Short Break!', currentTask.style.color = 'yellow',currentTaskContainer.style.backgroundColor = 'black',
             timerStarted = true,startTimer(shortBreak);
             break;
-        case 2:
-            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
-            timerStarted = true,startTimer(workTimer);
-            break;
-        case 3:
-            return currentTask.innerHTML = 'Short Break!', currentTask.style.color = 'yellow',currentTaskContainer.style.backgroundColor = 'black',
-            timerStarted = true,startTimer(shortBreak);
-            break;
-        case 4:
-            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
-            timerStarted = true,startTimer(workTimer);
-            break;
-        case 5:
-            return currentTask.innerHTML = 'Short Break!', currentTask.style.color = 'yellow',currentTaskContainer.style.backgroundColor = 'black',
-            timerStarted = true,startTimer(shortBreak);
-            break;
-        case 6:
-            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
-            timerStarted = true,startTimer(workTimer);
-            break;
-        case 7:
+        case 'long Break':
             return currentTask.innerHTML = 'Long Break!', currentTask.style.color = 'green',currentTaskContainer.style.backgroundColor = 'black', 
             timerStarted = true ,startTimer(longBreak);
             break;
@@ -172,7 +153,7 @@
     start.addEventListener('click', function() {
         if (timerStarted === false && task[0] !== undefined) {
             timerStarted = true;
-            getPomodoroStage(count);
+            getPomodoroStage(pomodoro[count]);
             timer.style.borderColor = 'red';
             setTimeout(() => {
                 timerText.style.color = 'white';
