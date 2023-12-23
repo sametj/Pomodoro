@@ -15,6 +15,7 @@
     let count = 0;
 
     const task = [];
+    
 
 
     let timerStarted = false;
@@ -32,13 +33,14 @@
     enter.addEventListener('keyup', function(e) {
         if(e.key === 'Enter') {
             add.click();
+            document.getElementById('task-input').value = '';
         }
 
     });
 
  //Adding tasks and displaying them
     add.addEventListener('click', function() {
-        const taskInput = document.getElementById('task-input').value;
+        const taskInput = document.getElementById('task-input').value.toUpperCase();
         if (taskInput === task[0] && timerStarted === false) {
             alert.innerHTML = 'Task already added! Start Timer to begin!';
             setTimeout(function() {
@@ -70,7 +72,8 @@
            
         }
         else{
-            task[0] = taskInput;
+            task[0] = taskInput
+            taskList.innerHTML = '';
             
             taskList.innerHTML = task;
             alert.innerHTML = 'Task Added!';
