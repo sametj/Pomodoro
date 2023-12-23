@@ -101,7 +101,7 @@
                 timerStarted = false;
                 count = 0;
                 currentTask.innerHTML = 'Pomodoro Timer Resetted!';
-                timer.innerHTML = '<h1>00:00</h1>';
+                timer.innerHTML = '<h1>25:00</h1>';
                 currentTaskContainer.style.backgroundColor = 'black';
                 currentTask.style.color = 'yellow';
                 timer.style.borderColor = 'grey';
