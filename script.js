@@ -105,6 +105,8 @@
                 currentTaskContainer.style.backgroundColor = 'black';
                 currentTask.style.color = 'yellow';
                 timer.style.borderColor = 'grey';
+                task.pop();
+                taskList.innerHTML = '';
                 clearInterval(countDown);
                 
          });
