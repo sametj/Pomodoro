@@ -27,7 +27,16 @@
     let pomodoro = ['Work Time!', 'Short Break!', 'Work Time!', 'Short Break!', 'Work Time!', 'Short Break!', 'Work Time!', 'Long Break!'];
     
     
-    //Adding tasks and displaying them
+   //Adding tasks with enter key
+    const enter = document.getElementById('task-input');
+    enter.addEventListener('keyup', function(e) {
+        if(e.key === 'Enter') {
+            add.click();
+        }
+
+    });
+
+ //Adding tasks and displaying them
     add.addEventListener('click', function() {
         const taskInput = document.getElementById('task-input').value;
         if (taskInput === task[0] && timerStarted === false) {
