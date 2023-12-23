@@ -104,6 +104,7 @@
                 timer.innerHTML = '<h1>00:00</h1>';
                 currentTaskContainer.style.backgroundColor = 'black';
                 currentTask.style.color = 'yellow';
+                timer.style.borderColor = 'grey';
                 clearInterval(countDown);
                 
          });
@@ -154,7 +155,6 @@
             timerStarted = true;
             getPomodoroStage(count);
             timer.style.borderColor = 'red';
-            timerText.style.color = 'red';
             setTimeout(() => {
                 timerText.style.color = 'white';
             }, 3000);
