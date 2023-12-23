@@ -25,7 +25,9 @@
     const longBreak = 900;
 
     let pomodoro = ['Work Time!', 'Short Break!', 'Work Time!', 'Short Break!', 'Work Time!', 'Short Break!', 'Work Time!', 'Long Break!'];
-    //Adding tasks
+    
+    
+    //Adding tasks and displaying them
     add.addEventListener('click', function() {
         const taskInput = document.getElementById('task-input').value;
         if (taskInput === task[0] && timerStarted === false) {
@@ -74,7 +76,8 @@
 
         
     });
-
+ 
+    //Starting and Reseting Timer
     function startTimer(pomodoroTime) {   
         timer.innerHTML = `<h1 id ="timer-text">${Math.floor(pomodoroTime/60)}:00</h1>`;  
         let time = pomodoroTime;
@@ -112,13 +115,13 @@
          });
 }
 
-   //Stop timer
+ 
    
-
+    //Setting Pomodoro Stages
    function getPomodoroStage(count){
     switch (count){
         case 0:
-            return currentTask.innerHTML = 'Work Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
+            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
             timerStarted = true,startTimer(workTimer);
             
         case 1: 
@@ -126,7 +129,7 @@
             timerStarted = true,startTimer(shortBreak);
             break;
         case 2:
-            return currentTask.innerHTML = 'Work Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
+            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
             timerStarted = true,startTimer(workTimer);
             break;
         case 3:
@@ -134,7 +137,7 @@
             timerStarted = true,startTimer(shortBreak);
             break;
         case 4:
-            return currentTask.innerHTML = 'Work Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
+            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
             timerStarted = true,startTimer(workTimer);
             break;
         case 5:
@@ -142,7 +145,7 @@
             timerStarted = true,startTimer(shortBreak);
             break;
         case 6:
-            return currentTask.innerHTML = 'Work Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
+            return currentTask.innerHTML = 'Task Focus Time!', currentTask.style.color = 'red',currentTaskContainer.style.backgroundColor = 'black',
             timerStarted = true,startTimer(workTimer);
             break;
         case 7:
@@ -152,6 +155,8 @@
     }
    }
 
+
+   //starting timer when start button is clicked
     start.addEventListener('click', function() {
         if (timerStarted === false && task[0] !== undefined) {
             timerStarted = true;
