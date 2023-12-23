@@ -131,8 +131,9 @@ h1{
 
  #task-container{
     justify-content: center;
-    width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    height: 55%;
     padding: 10px;
     background-color: rgb(219, 217, 217);
     border-radius: 10px;

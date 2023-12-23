@@ -46,7 +46,7 @@
                 alert.innerHTML = '';
             }, 3000);
             alert.style.color = 'orange';
-            alert.style.fontSize = '50px';
+           
             return;
         }
         else if (taskInput !== task[0] && timerStarted === true) {
@@ -56,7 +56,7 @@
                 alert.innerHTML = '';
             }, 3000);
             alert.style.color = 'red';
-            alert.style.fontSize = '50px';
+           
         }
         else{
             task[0] = taskInput;
@@ -67,9 +67,10 @@
                 alert.innerHTML = '';
             }, 3000);
             alert.style.color = 'green';
-            alert.style.fontSize = '50px';
+            
         }
         
+        alert.style.fontSize = '1.5rem';
 
         
     });
@@ -158,7 +159,7 @@
                 timerText.style.color = 'white';
             }, 3000);
             count++;
-            timerStarted.style.borderColor = 'Green';
+            timerText.style.borderColor = 'green';
         }
         else if (timerStarted === true) {
             alert.innerHTML = 'Timer is already running!';
@@ -166,16 +167,15 @@
                 alert.innerHTML = '';
             }, 2000);
             alert.style.color = 'orange';
-            alert.style.fontSize = '50px';
+           
         }else if (task[0] === undefined){
             alert.innerHTML = 'Please add a task!';
             setTimeout(function() {
                 alert.innerHTML = '';
             }, 2000);
-            alert.style.color = 'orange';
-            alert.style.fontSize = '50px';
+            alert.style.color = 'orange';  
         }
-      
+        alert.style.fontSize = '1.5rem';
      });
 
 
