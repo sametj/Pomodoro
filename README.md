@@ -1,6 +1,6 @@
 ## POMODORO APP
 
-V 0.0.3
+V 0.0.4
 A simple pomodoro app to time your task.
 
 ## Image Link

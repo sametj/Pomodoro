@@ -3,6 +3,7 @@ const reset = document.getElementById("reset-button");
 const add = document.getElementById("task-button");
 
 const taskList = document.getElementById("current-task-container");
+const taskText = document.getElementById("task-text");
 const currentTask = document.getElementById("current-task-header");
 const currentTaskContainer = document.getElementById("current-task-div");
 const timer = document.getElementById("timer");
@@ -45,7 +46,6 @@ inputBox.addEventListener("keyup", function (e) {
 function setAlert(text, color) {
   alert.innerHTML = text;
   alert.style.color = color;
-  alert.style.fontWeight = "light";
   alert.style.fontSize = "1.7rem";
   alertDiv.style.backgroundColor = "black";
   resetAlert();
@@ -71,10 +71,19 @@ add.addEventListener("click", function () {
     setAlert("Timer is already running! Reset timer to Change task!", "red");
   } else {
     task[0] = taskInput;
-    taskList.innerHTML = task;
+    taskText.innerHTML = task;
+    taskText.style.backgroundColor = "green";
+    taskText.style.color = "white";
     setAlert("Task Added!", "green");
   }
 });
+
+function removeTask() {
+  task.pop();
+  taskText.innerHTML = "";
+  inputBox.value = "";
+  taskText.style.backgroundColor = "transparent";
+}
 
 //Starting and Reseting Timer
 function startTimer(pomodoroTime) {
@@ -123,9 +132,7 @@ function startTimer(pomodoroTime) {
     currentTaskContainer.style.backgroundColor = "black";
     currentTask.style.color = "yellow";
     timer.style.borderColor = "grey";
-    task.pop();
-    taskList.innerHTML = "";
-    inputBox.value = "";
+    removeTask();
     clearInterval(countDown);
   });
 }
