@@ -116,6 +116,11 @@ h2,
   }
   #task-header-container h1 {
     font-family: sans-serif;
+    font-weight: extra-bold;
+  }
+
+  #task-container h1 {
+    font-family: sans-serif;
   }
 }
 
@@ -150,7 +155,7 @@ h2,
   }
 
   #task-container {
-    height: 55vh;
+    height: 56vh;
   }
 
   #task-list {
