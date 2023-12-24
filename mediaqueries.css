@@ -113,6 +113,9 @@ h1 #timer-text {
   #task-button {
     padding: 5px;
   }
+  #task-header-container h1 {
+    font-family: fantasy;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -128,6 +131,15 @@ h1 #timer-text {
     margin: 12rem auto;
     width: 75%;
   }
+  h1 #timer-text {
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  #task-header-container h1 {
+    font-family: fantasy;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -141,6 +153,9 @@ h1 #timer-text {
 
   #task-list {
     margin: 20rem auto;
+  }
+  #task-header-container h1 {
+    font-family: fantasy;
   }
 }
 
