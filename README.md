@@ -34,6 +34,8 @@ Such validations include:
 - Delete or Edit Task button
 - History: Show previously completed pomodoros
 - Improve Erro Handling
+- Expand mobile compatibility range
+  
 
 
 
