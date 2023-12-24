@@ -72,6 +72,7 @@ add.addEventListener("click", function () {
   } else {
     task[0] = taskInput;
     taskText.innerHTML = task;
+    inputBox.value = "";
     taskText.style.backgroundColor = "green";
     taskText.style.color = "white";
     setAlert("Task Added!", "green");
