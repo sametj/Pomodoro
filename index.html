@@ -1,60 +1,51 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teejay's Pomodoro</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="mediaqueries.css" rel="stylesheet">
-</head>
-<body>
-
-    <div id = header-div>
-        <h1 class = "header">Pomodoro</h1>
+    <link href="style.css" rel="stylesheet" />
+    <link href="mediaqueries.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="header-div">
+      <h1 class="header">Pomodoro</h1>
     </div>
 
-
-    <div id = current-task-div>
-        <h1 id = "current-task-header"></h1>
+    <div id="current-task-div">
+      <h1 id="current-task-header"></h1>
     </div>
 
-    <div id = "alert-div">
-        <h2 id = "alert-text"> </h2>
+    <div id="alert-div">
+      <h2 id="alert-text"></h2>
     </div>
     <div class="main-container">
-        <div id="timer-container" >
-                <div id="timer">
-                    <h1 id="timer-text">25:00</h1>
-                </div>
-                
+      <div id="timer-container">
+        <div id="timer">
+          <h1 id="timer-text">25:00</h1>
+        </div>
+      </div>
+
+      <div class="buttons-container">
+        <button id="start-button" class="button">Start</button>
+        <button id="reset-button" class="button">Reset</button>
+      </div>
+
+      <div id="task-container">
+        <div id="task-header-container">
+          <h1 id="task-text">📝 Current Task!</h1>
         </div>
 
-        <div class="buttons-container">
-            <button id="start-button" class="button">Start</button>
-            <button id="reset-button" class="button">Reset</button>
+        <div id="current-task-container">
+          <h1 id="task-text"></h1>
         </div>
 
+        <div id="task-list">
+          <input id="task-input" type="text" placeholder="Enter task" />
+          <button id="task-button" class="button">Add</button>
+        </div>
+      </div>
+    </div>
+  </body>
 
-        <div id="task-container">
-
-             <div id="task-header-container">
-                    <h1 id="task-text"> 📝 Current Task!</h1>
-              </div>
-
-             <div id="current-task-container">
-                    <h1 id="task-text"></h1>
-             </div>
-        
-             <div id="task-list">
-                 <input id="task-input" type="text" placeholder="Enter task">
-                  <button id="task-button" class="button">Add</button>
-             </div>
-        
-         </div>
-
-    </div>  
-    
-    
-</body>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </html>

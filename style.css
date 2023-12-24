@@ -1,228 +1,217 @@
-div{
-    margin: 10px;
-    text-align: center;
-   
-    width: 50%;
-}
- body{
-    background-color: blue;
- }
+div {
+  margin: 10px;
+  text-align: center;
 
-h1{
-    font-size: 60px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
+  width: 50%;
+}
+body {
+  background-color: beige;
 }
 
-#alert-div{
-    margin: 0 auto;
-    padding: 10px;
-    width: 50%;
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: black;
-    text-align: center; 
-    overflow-wrap: break-word;
-    overflow-y: auto;
-
+h1 {
+  font-size: 60px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
 }
 
-#header-div{
-    margin:auto auto 20px  auto;
-    padding: 0;
-    width: 50%;
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: black;   
-    text-align: center;
-    
+#alert-div {
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  width: 50%;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
+  text-align: center;
+  overflow-wrap: break-word;
+  overflow-y: auto;
 }
 
-#current-task-div{
-    margin: 0 auto;
-
-    border-radius: 50px;
-    box-shadow: 0px 0px 20px 0px #000000;
-    align-items: center;
+#header-div {
+  margin: auto auto 20px auto;
+  padding: 0;
+  width: 50%;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
+  text-align: center;
 }
 
-.main-container{
-    border: 2px solid black;
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: black;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px #000000;
-    align-items: center;
+#current-task-div {
+  margin: 0 auto;
+
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px 0px #000000;
+  align-items: center;
 }
 
-#timer-container{
-    margin: 0 auto;
-    width: 50%;
-    border-radius: 200px;
-    box-shadow: 0px 0px 20px 0px #000000;
-    align-items: center;
+.main-container {
+  border: 2px solid black;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px #000000;
+  align-items: center;
 }
 
-#timer{
-    border: 5px solid white;
-    display: inline-flex;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: gray;
-    border-radius: 200px;
-    box-shadow: 0px 0px 20px 0px #000000;
-    
+#timer-container {
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 200px;
+  box-shadow: 0px 0px 20px 0px #000000;
+  align-items: center;
 }
 
-#timer h1{
-    color: white;
-    font-size: 80px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    margin: 10px auto 5px auto;
+#timer {
+  border: 5px solid white;
+  display: inline-flex;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 200px;
+  box-shadow: 0px 0px 20px 0px #000000;
 }
 
-.buttons-container{
-    border: 0 solid black;
-    border-radius: 50px;
-    width: 50%;
-    margin: 50px auto auto auto;
-    
+#timer h1 {
+  color: white;
+  font-size: 80px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  margin: 10px auto 5px auto;
 }
 
-.buttons-container button{
-    margin: 10px;
-    padding: 10px;
-    width: 120px;
-    border-radius: 10px;
-    border: 2px solid paleturquoise;
-    background-color: transparent;
-    box-shadow: 0px 0px 20px 0px #000000;
-    font-size: 20px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: white;
+.buttons-container {
+  border: 0 solid black;
+  border-radius: 50px;
+  width: 50%;
+  margin: 50px auto auto auto;
 }
 
-.buttons-container #start-button:hover{
-    background-color: #09ff00;
-    color: white;
-    cursor: pointer;
+.buttons-container button {
+  margin: 10px;
+  padding: 10px;
+  width: 120px;
+  border-radius: 10px;
+  border: 2px solid paleturquoise;
+  background-color: transparent;
+  box-shadow: 0px 0px 20px 0px #000000;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: white;
 }
 
-
-.buttons-container #reset-button:hover{
-    background-color: yellow;
-    color: black;
-    cursor: pointer;
+.buttons-container #start-button:hover {
+  background-color: #09ff00;
+  color: white;
+  cursor: pointer;
 }
 
-
-
-
- #task-container{
-    justify-content: center;
-    margin: 0 auto 0 auto;
-    width: 80%;
-    height: 55%;
-    padding: 10px;
-    background-color: rgb(219, 217, 217);
-    border-radius: 10px;
-       
+.buttons-container #reset-button:hover {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
 }
 
-#task-header-container{
-    margin: 0 auto;
-    padding: 10px;
-    background-color: green;
-    border-radius: 200px;
-    align-items: center;
+#task-container {
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  height: 55%;
+  padding: 10px;
+  background-color: rgb(219, 217, 217);
+  border-radius: 10px;
 }
 
-#task-list{
-    margin: 20px auto;
-    padding: 10px;
-    width: 75%;
-    background-color: transparent;
-    border-radius: 200px;
-    box-shadow: 0px 0px 20px 0px #000000;
-    
+#task-header-container {
+  margin: 0 auto;
+  padding: 10px;
+  background-color: green;
+  border-radius: 200px;
+  align-items: center;
 }
 
-#task-container h1{
-    color: black;
-    font-size: 30px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    margin: 10px auto 5px auto;
+#task-list {
+  margin: 8.5rem auto;
+  padding: 10px;
+  width: 75%;
+  background-color: transparent;
+  border-radius: 200px;
+  box-shadow: 0px 0px 20px 0px #000000;
 }
 
-#task-input{
-    margin: 10px auto;
-    padding: 10px;
-    width: 75%;
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: black;
+#task-container h1 {
+  color: black;
+  font-size: 30px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  margin: 10px auto 5px auto;
 }
 
-#task-input:focus{
-    outline-color: green; 
+#task-input {
+  margin: 10px auto;
+  padding: 10px;
+  width: 75%;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
 }
 
-#task-button{
-    margin: 10px auto;
-    padding: 10px;
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: black;
+#task-input:focus {
+  outline-color: green;
 }
 
-#task-button:hover{
-    background-color: green;
-    color: white;
-    cursor: pointer;
+#task-button {
+  margin: 10px auto;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
 }
 
-#task-text{
-    margin: 10px auto;
-    padding: 10px;
-    width: 75%;
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 20px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: black;
+#task-button:hover {
+  background-color: green;
+  color: white;
+  cursor: pointer;
 }
 
-#current-task-container{
-    padding: 10px;
-    width: 90%;
-    height: 10%;
-    background-color: transparent;
-    border-radius: 15px;
-    font-size: 40px;
-    font-family: 'Blippo', fantasy;
-    font-style: italic;
-    color: black;
-    text-align: center; 
-    overflow-wrap: break-word;
-    overflow-y: auto;
+#task-text {
+  margin: 10px auto;
+  padding: 10px;
+  width: 75%;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
 }
 
+#current-task-container {
+  padding: 10px;
+  width: 90%;
+  height: 10%;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 40px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
+  text-align: center;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
