@@ -13,13 +13,9 @@
     
     
     let count = 0;
-
     const task = [];
     
-
-
     let timerStarted = false;
-    let paused = false;
 
     const workTimer = 1500;
     const shortBreak = 300;
@@ -38,52 +34,50 @@
 
     });
 
+    //resetting alert
+    function resetAlert(){
+        setTimeout(function() {
+            alert.innerHTML = '';
+        }, 2000);
+    }  
+
+
  //Adding tasks and displaying them
     add.addEventListener('click', function() {
         const taskInput = document.getElementById('task-input').value.toUpperCase();
         if (taskInput === task[0] && timerStarted === false) {
             alert.innerHTML = 'Task already added! Start Timer to begin!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 3000);
-        }else
-        if (taskInput === task[0] && timerStarted === true) {
+                resetAlert();
+        }
+
+        else if (taskInput === task[0] && timerStarted === true) {
             alert.innerHTML = 'Task already added and timer is running!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 3000);
+                 resetAlert();
         }
-            else if (taskInput === '') {
+
+        else if (taskInput === '') {
             alert.innerHTML = 'Please enter a task!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 3000);
             alert.style.color = 'orange';
+            resetAlert(); 
            
-            return;
         }
+
         else if (taskInput !== task[0] && timerStarted === true) {
 
             alert.innerHTML = 'Timer is already running! Reset timer to Change task!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 3000);
             alert.style.color = 'red';
+            resetAlert();
            
         }
+
         else{
             task[0] = taskInput
-            taskList.innerHTML = '';
-            
             taskList.innerHTML = task;
             alert.innerHTML = 'Task Added!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 3000);
             alert.style.color = 'green';
+            resetAlert();
             
         }
-        
         alert.style.fontSize = '1.5rem';
 
         
@@ -91,18 +85,33 @@
  
     //Starting and Reseting Timer
     function startTimer(pomodoroTime) {   
-        timer.innerHTML = `<h1 id ="timer-text">${Math.floor(pomodoroTime/60)}:00</h1>`;  
+        timerText.innerHTML = `${Math.floor(pomodoroTime/60)}:00`;  
         let time = pomodoroTime;
         const countDown = setInterval(function() {
+            
             time--;
-            currentTime = time;
+            while (time > 0){
+                setTimeout(function() {
+                    timerText.style.color = 'red';
+                }, 500);
+                setTimeout(function() {
+                    timerText.style.color = 'yellow';
+                }, 1000);
+                if (time === 0){
+                    timerText.style.color = 'white';
+                }
+                
+                break;
+            }
+            
             const minutes = Math.floor(time / 60);
             const seconds = time % 60;
-            timer.innerHTML = `<h1 id ="timer-text">${minutes}:${seconds < 10 ? '0' : ''}${seconds}</h1>`;
+            timerText.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            
             timerStarted = true;
             if (time === 0) {
                 clearInterval(countDown);
-                timer.innerHTML = `<h1 id ="timer-text">${minutes}:${seconds < 10 ? '0' : ''}${seconds} </h1>`;
+                timerText.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
                 currentTask.innerHTML = pomodoro[count];
                 if (count === 7) {
                     currentTask.innerHTML = 'Pomodoro Complete!, Click Reset to Start Again!'
@@ -117,7 +126,7 @@
                 timerStarted = false;
                 count = 0;
                 currentTask.innerHTML = 'Pomodoro Timer Resetted!';
-                timer.innerHTML = '<h1>25:00</h1>';
+                timerText.innerHTML = '25:00';
                 currentTaskContainer.style.backgroundColor = 'black';
                 currentTask.style.color = 'yellow';
                 timer.style.borderColor = 'grey';
@@ -149,33 +158,34 @@
    }
 
 
+
+
    //starting timer when start button is clicked
     start.addEventListener('click', function() {
+        alert.style.fontSize = '1.5rem';
         if (timerStarted === false && task[0] !== undefined) {
-            timerStarted = true;
-            getPomodoroStage(pomodoro[count]);
-            timer.style.borderColor = 'red';
-            setTimeout(() => {
-                timerText.style.color = 'white';
-            }, 3000);
-            count++;
-            timerText.style.borderColor = 'green';
+                timerStarted = true;
+                getPomodoroStage(pomodoro[count]);
+                alert.innerHTML = 'Timer Started!';
+                alert.style.color = 'yellow';
+                resetAlert();
+                timer.style.borderColor = 'red';
+                count++;
+              
         }
+
         else if (timerStarted === true) {
-            alert.innerHTML = 'Timer is already running!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 2000);
-            alert.style.color = 'orange';
-           
-        }else if (task[0] === undefined){
+                alert.innerHTML = 'Timer is already running!';
+                     resetAlert();
+                alert.style.color = 'orange';   
+        }
+        
+        else if (task[0] === undefined){
             alert.innerHTML = 'Please add a task!';
-            setTimeout(function() {
-                alert.innerHTML = '';
-            }, 2000);
+                resetAlert();
             alert.style.color = 'orange';  
         }
-        alert.style.fontSize = '1.5rem';
+            
      });
 
 
