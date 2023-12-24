@@ -2,9 +2,9 @@
 V 0.0.1
  A simple pomodoro app to time your task.
  ## Image Link
-Desktop View: ![image](https://github.com/sametj/Pomodoro/assets/102891262/bc7e5b00-c548-45af-b105-5c877fbe6ff8)
+Desktop View:![image](https://github.com/sametj/Pomodoro/assets/102891262/bc7e5b00-c548-45af-b105-5c877fbe6ff8)
 
-Mobile View: ![image](https://github.com/sametj/Pomodoro/assets/102891262/bf67998f-c203-4746-bd9d-763ab7465fc8)
+Mobile View:![image](https://github.com/sametj/Pomodoro/assets/102891262/bf67998f-c203-4746-bd9d-763ab7465fc8)
 
 
 # Website
