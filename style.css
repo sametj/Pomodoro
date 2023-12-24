@@ -141,6 +141,7 @@ h1 {
 
 #task-list {
   margin: 8.5rem auto;
+  position: inherit;
   padding: 10px;
   width: 75%;
   background-color: white;
