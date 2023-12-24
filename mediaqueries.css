@@ -1,394 +1,173 @@
-@media all and (max-width: 700px) {
-  html,
-  body {
-    font-family: sans-serif;
-    overflow-x: hidden;
-  }
+html,
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
 
-  h1 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
+h1,
+h2,
+#task-input,
+#task-button,
+#start-button,
+#reset-button {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
 
-  h2 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
+.main-container {
+  padding: 0;
+  align-items: center;
+}
+
+.buttons-container {
+  padding: 0;
+  margin: auto;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+}
+
+#task-container {
+  padding: 0;
+  align-items: center;
+}
+
+#task-header-container {
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+}
+
+#current-task-container {
+  padding: 0;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+h1 #timer-text {
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#task-list {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#alert-div {
+  padding: 0;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 300px) {
+  #screen-size-text {
+    display: block;
   }
 
   div {
-    width: 100%;
+    display: none;
   }
+}
 
-  #header-div {
-    width: 100%;
-    border-radius: 200px;
-    align-items: center;
-  }
-  .header {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
+@media all and (min-width: 300px) {
+  div,
+  #header-div,
   #current-task-div {
     width: 100%;
-    background-color: red;
-    border-radius: 200px;
-    align-items: center;
-  }
-
-  #alert-div {
-    width: 100%;
-    padding: 0%;
-    position: sticky;
-    border-radius: 200px;
-    align-items: center;
   }
 
   .main-container {
-    padding: 0;
     width: 100%;
     height: 70vh;
-    align-items: center;
   }
 
-  .buttons-container {
-    padding: 0;
-    margin: auto;
-    justify-content: center;
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-  }
-
+  .buttons-container,
   #timer-container {
-    padding: 0;
-    justify-self: center;
-    background-color: transparent;
-    width: 50%;
-    align-items: center;
+    width: 80%;
   }
 
-  #timer {
-    background-color: transparent;
-    padding: 0;
-    align-items: center;
-  }
-
-  #timer h1 {
-    font-size: 2rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
   #task-container {
-    padding: 0;
     width: 90%;
-
     height: 50vh;
-    align-items: center;
-  }
-  #task-container h1 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #task-header-container {
-    background-color: transparent;
-    padding: 0;
-    width: 100%;
   }
 
   #current-task-container {
-    padding: 0;
     width: 95%;
     height: 22vh;
-    align-items: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
   }
 
-  h1 #timer-text {
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-weight: bold;
-  }
-
-  #task-input {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
+  #task-list {
+    margin: 13rem auto;
+    position: inherit;
+    width: 95%;
   }
 
   #task-button {
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-  #task-list {
-    margin: 8vh auto 8vh auto;
-    position: inherit;
-    padding: 0;
-    border-radius: 15px;
-    width: 95%;
-  }
-  #start-button {
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #reset-button {
-    font-family: sans-serif;
-    font-weight: bold;
+    padding: 5px;
   }
 }
 
 @media screen and (min-width: 700px) {
-  html,
-  body {
-    font-family: sans-serif;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #header-div {
-    width: 100%;
-    border-radius: 200px;
-    align-items: center;
-  }
-  .header {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  #current-task-div {
-    width: 100%;
-    background-color: red;
-    border-radius: 200px;
-    align-items: center;
-  }
-
-  #alert-div {
-    width: 100%;
-    padding: 0%;
-    position: sticky;
-    border-radius: 200px;
-    align-items: center;
-  }
-
-  .main-container {
-    padding: 0;
-    width: 100%;
-    height: 70vh;
-    align-items: center;
-  }
-
-  .buttons-container {
-    padding: 0;
-    margin: auto;
-    justify-content: center;
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
-  }
-
   #task-container {
-    padding: 0;
-    width: 90%;
-
     height: 45vh;
-    align-items: center;
-  }
-  #task-container h1 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #task-header-container {
-    background-color: transparent;
-    padding: 0;
-    width: 100%;
   }
 
   #current-task-container {
-    padding: 0;
-    width: 95%;
     height: 20vh;
-    align-items: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
   }
 
-  h1 #timer-text {
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-weight: bold;
-  }
-
-  #task-input {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #task-button {
-    font-family: sans-serif;
-    font-weight: bold;
-  }
   #task-list {
-    margin: 12vh auto 0 auto;
-    position: inherit;
-    padding: 0;
-    border-radius: 15px;
-    width: 95%;
-  }
-  #start-button {
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #reset-button {
-    font-family: sans-serif;
-    font-weight: bold;
+    margin: 12rem auto;
+    width: 75%;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  html,
-  body {
-    font-family: sans-serif;
-    overflow-x: hidden;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #header-div {
-    width: 100%;
-    border-radius: 200px;
-    align-items: center;
-  }
-  .header {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  #current-task-div {
-    width: 100%;
-    background-color: red;
-    border-radius: 200px;
-    align-items: center;
-  }
-
-  #alert-div {
-    width: 100%;
-    padding: 0%;
-    position: sticky;
-    border-radius: 200px;
-    align-items: center;
-  }
-
   .main-container {
-    padding: 0;
-    width: 100%;
     height: 100%;
-    align-items: center;
-  }
-
-  .buttons-container {
-    padding: 0;
-    margin: auto;
-    justify-content: center;
-    display: inline-flex;
-    width: 100%;
-    align-items: center;
   }
 
   #task-container {
-    padding: 0;
-    width: 90%;
-
     height: 55vh;
-    align-items: center;
-  }
-  #task-container h1 {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
   }
 
-  #task-header-container {
-    background-color: transparent;
-    padding: 0;
-    width: 100%;
-  }
-
-  #current-task-container {
-    padding: 0;
-    width: 95%;
-    height: 20vh;
-    align-items: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  h1 #timer-text {
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-weight: bold;
-  }
-
-  #task-input {
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-
-  #task-button {
-    font-family: sans-serif;
-    font-weight: bold;
-  }
   #task-list {
-    margin: 12vh auto 0 auto;
-    position: inherit;
-    padding: 0;
-    border-radius: 15px;
-    width: 95%;
+    margin: 20rem auto;
   }
-  #start-button {
-    font-family: sans-serif;
-    font-weight: bold;
+}
+
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-family: "Blippo", fantasy;
+    font-style: italic;
   }
 
-  #reset-button {
-    font-family: sans-serif;
-    font-weight: bold;
+  .main-container {
+    width: 50%;
+    height: 80vh;
+  }
+
+  #task-list {
+    background-color: transparent;
+  }
+}
+
+@media (min-aspect-ratio: 2/1) {
+  h1 {
+    font-family: "Blippo", fantasy;
+    font-style: italic;
+  }
+
+  .main-container {
+    width: 50%;
+    height: 80vh;
   }
 }

@@ -144,7 +144,7 @@ h1 {
   padding: 10px;
   width: 75%;
   background-color: transparent;
-  border-radius: 200px;
+  border-radius: 50px;
   box-shadow: 0px 0px 20px 0px #000000;
 }
 
@@ -191,7 +191,7 @@ h1 {
 
 #task-text {
   margin: 50px auto 0 auto;
-  padding: 20px;
+  padding: 30px;
   width: 80%;
   background-color: transparent;
   border-radius: 15px;
@@ -214,4 +214,72 @@ h1 {
   justify-content: center;
   overflow-wrap: break-word;
   overflow-y: auto;
+}
+
+#screen-size-text {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: extra-bold;
+  display: none;
+}
+
+/* Common styles */
+div {
+  margin: auto;
+  width: 50%;
+  align-items: center;
+}
+
+#alert-div,
+#header-div {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 20px;
+  font-family: "Blippo", fantasy;
+  font-style: italic;
+  color: black;
+  text-align: center;
+}
+
+#alert-div {
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
+
+#header-div {
+  margin-bottom: 20px;
+}
+
+#current-task-div {
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+.main-container {
+  border: 2px solid black;
+  height: 50%;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+#timer-container {
+  border-radius: 200px;
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+#timer {
+  border: 5px solid white;
+  display: inline-flex;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 200px;
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+#timer h1 {
+  color: white;
 }

@@ -102,6 +102,43 @@ function startTimer(pomodoroTime) {
           timerText.style.color = "yellow";
         }, 1000);
       }
+      function updateTimerText(content, color) {
+        timerText.innerHTML = content;
+        timerText.style.color = color;
+      }
+
+      function updateCurrentTask(content, color) {
+        currentTask.innerHTML = content;
+        currentTask.style.color = color;
+      }
+
+      // ...
+
+      if (time === 0) {
+        clearInterval(countDown);
+        updateTimerText(
+          `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`,
+          "white"
+        );
+        if (count === 7) {
+          updateCurrentTask(
+            "Pomodoro Complete!, Click Reset to Start Again!",
+            "Green"
+          );
+        } else {
+          updateCurrentTask(pomodoro[count], "white");
+        }
+        timerStarted = false;
+      }
+
+      // ...
+
+      reset.addEventListener("click", function () {
+        updateTimerText("25:00", "white");
+        updateCurrentTask("Pomodoro Resetted!", "white");
+        timerStarted = false;
+        count = 0;
+      });
       break;
     }
 
