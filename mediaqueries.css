@@ -64,7 +64,7 @@ h2,
   font-family: sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  width: 50%;
+  width: 100%;
 }
 
 @media screen and (max-width: 300px) {
@@ -96,7 +96,7 @@ h2,
 
   #task-container {
     width: 90%;
-    height: 50vh;
+    height: 36vh;
   }
 
   #current-task-container {
@@ -105,9 +105,10 @@ h2,
   }
 
   #task-list {
-    margin: 13rem auto;
+    margin: -1rem 1rem 0 0;
     position: inherit;
-    width: 95%;
+    padding: 1px;
+    width: 100%;
   }
 
   #task-button {
@@ -128,7 +129,8 @@ h2,
   }
 
   #task-list {
-    margin: 12rem auto;
+    position: inherit;
+    margin: 8rem auto;
     width: 75%;
   }
   h1 #timer-text {
@@ -152,7 +154,7 @@ h2,
   }
 
   #task-list {
-    margin: 20rem auto;
+    margin: 5rem auto;
   }
   #task-header-container h1 {
     font-family: fantasy;
