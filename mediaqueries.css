@@ -67,6 +67,9 @@ h2,
   width: 100%;
 }
 
+#timer {
+  width: 75%;
+}
 @media screen and (max-width: 300px) {
   #screen-size-text {
     display: block;
@@ -206,6 +209,9 @@ h2,
     width: 75%;
     background-color: transparent;
   }
+  #current-task-div {
+    width: 50%;
+  }
 }
 
 @media (min-aspect-ratio: 2/1) {
@@ -221,5 +227,9 @@ h2,
 
   #task-list {
     margin: 13rem auto;
+  }
+
+  #current-task-div {
+    width: 50%;
   }
 }
