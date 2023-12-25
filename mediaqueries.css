@@ -105,7 +105,7 @@ h2,
   }
 
   #task-list {
-    margin: -1rem 1rem 0 0;
+    margin: -1rem auto;
     position: inherit;
     padding: 1px;
     width: 100%;
@@ -162,10 +162,29 @@ h2,
   }
 
   #task-list {
-    margin: 2rem auto;
+    margin: 12rem auto;
   }
   #task-header-container h1 {
     font-family: fantasy;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-family: "Blippo", fantasy;
+    font-style: italic;
+  }
+
+  .main-container {
+    width: 50%;
+    height: 80vh;
+  }
+
+  #task-list {
+    margin: 14rem auto;
+    position: inherit;
+    padding: 1px;
+    width: 75%;
+    background-color: transparent;
   }
 }
 
@@ -181,6 +200,10 @@ h2,
   }
 
   #task-list {
+    margin: 14rem auto;
+    position: inherit;
+    padding: 1px;
+    width: 75%;
     background-color: transparent;
   }
 }
@@ -193,10 +216,10 @@ h2,
 
   .main-container {
     width: 50%;
-    height: 80vh;
+    height: 80%;
   }
 
   #task-list {
-    margin: 15rem auto;
+    margin: 13rem auto;
   }
 }
