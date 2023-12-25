@@ -140,7 +140,7 @@ h1 {
 }
 
 #task-list {
-  margin: 8.5rem auto;
+  margin: 21rem auto;
   position: inherit;
   padding: 10px;
   width: 75%;
@@ -224,7 +224,6 @@ h1 {
   display: none;
 }
 
-/* Common styles */
 div {
   margin: auto;
   width: 50%;

@@ -125,8 +125,11 @@ h2,
 }
 
 @media screen and (min-width: 700px) {
+  .main-container {
+    height: 77%;
+  }
   #task-container {
-    height: 45vh;
+    height: 60%;
   }
 
   #current-task-container {
@@ -151,15 +154,15 @@ h2,
 
 @media screen and (min-width: 1000px) {
   .main-container {
-    height: 100%;
+    height: 80%;
   }
 
   #task-container {
-    height: 56vh;
+    height: 60%;
   }
 
   #task-list {
-    margin: 5rem auto;
+    margin: 2rem auto;
   }
   #task-header-container h1 {
     font-family: fantasy;
@@ -191,5 +194,9 @@ h2,
   .main-container {
     width: 50%;
     height: 80vh;
+  }
+
+  #task-list {
+    margin: 21rem auto;
   }
 }
