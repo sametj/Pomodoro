@@ -93,15 +93,16 @@ function startTimer(pomodoroTime) {
   const countDown = setInterval(function () {
     time--;
     while (time > 0) {
-      if (time === 0) {
-        timerText.style.color = "white";
-      } else {
+      if (time > 0) {
         setTimeout(function () {
           timerText.style.color = "red";
         }, 500);
         setTimeout(function () {
           timerText.style.color = "yellow";
         }, 1000);
+        break;
+      } else {
+        timerText.style.color = "white";
       }
       function updateTimerText(content, color) {
         timerText.innerHTML = content;
@@ -162,11 +163,11 @@ function startTimer(pomodoroTime) {
 
   //resetting pomodoro timer
   reset.addEventListener("click", function () {
-    timerText.style.color = "white";
     timerStarted = false;
     count = 0;
     currentTask.innerHTML = "Pomodoro Resetted!";
     timerText.innerHTML = "25:00";
+    timerText.style.color = "white";
     currentTaskContainer.style.backgroundColor = "black";
     currentTask.style.color = "yellow";
     timer.style.borderColor = "grey";
@@ -196,7 +197,7 @@ function getPomodoroStage(focus) {
         startTimer(shortBreak)
       );
       break;
-    case "long Break":
+    case "Long Break":
       return (
         (currentTask.innerHTML = "Long Break!"),
         (currentTask.style.color = "green"),
