@@ -134,14 +134,6 @@ function startTimer(pomodoroTime) {
       }
 
       // ...
-
-      reset.addEventListener("click", function () {
-        updateTimerText("25:00", "white");
-        updateCurrentTask("Pomodoro Resetted!", "white");
-        timerStarted = false;
-        count = 0;
-      });
-      break;
     }
 
     const minutes = Math.floor(time / 60);
@@ -224,3 +216,6 @@ start.addEventListener("click", function () {
     setAlert("Please add a task!", "orange");
   }
 });
+
+const container = document.getElementsByClassName("main-container");
+const snowflakes = document.getElementsByClassName("snowflake");
