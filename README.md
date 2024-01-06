@@ -1,4 +1,4 @@
-## POMODORO APP
+## Pomodoro Pulse: Time Management App
 
 V 0.0.6
 A simple pomodoro app to time your task.
